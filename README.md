@@ -9,6 +9,15 @@ The algorithm explores the entirity of the tree of possibilities. Due to the fac
 
 <dl>
 
+<dt><b>Grid Creation</b></dt>
+<dd style="text-align:justify">
+Grid created from file (...). Each point in the grid will be represented by a number, the number are defined as followed:
+</dd>
+<dd><b>0 - </b>Occupied position, here there is a piece or it is not a part of the grid (as grid is not perfectly square)</dd>
+<dd><b>1 - </b>Month position</dd>
+<dd><b>2 - </b>Number position</dd>
+<dd><b>3 - </b>Day position</dd>
+
 <dt><b>Node Creation</b></dt>
 <dd style="text-align:justify">
 For each node when it is first created, we first check if the piece fits (check if Null terminal) and if it does we update our current grid with the current piece. We then check if it is a positive terminal or negative terminal node. If it is none of the above then for each remaining shape (and all it's orientations) we create a node with the current node as the parent.
@@ -17,8 +26,8 @@ For each node when it is first created, we first check if the piece fits (check 
 <dt><b>Node Routine</b></dt>
 <dd style="text-align:justify">
 Once a node is created and we have checked it is not terminal. We loop over each square that is left and create a node with it (start routine on it). We take the output of this routine, if it is null then proceed to next node, if it isn't it contains the list of traces of the all solutions we happened upon, we add the trace to the list of traces and continue searching. Once we have looped through every shape we return the list of traces.
-
-Question: When do we add ourselves to the trace? Also do we add ourselves only once at the top of the list of traces (in an attempt to reduce memory usage -> burden on the stack) or just make the lists of traces directly?
+<br><br>
+Question: When do we add ourselves to the trace? Also do we add ourselves only once at the top of the list of traces (in an attempt to reduce memory usage -> burden on the stack | with this replace node lists by a node tree in recursive function, then have a function to create lists from trees) or just make the lists of traces directly?
 </dd>
 
 <dt><b>Terminal Nodes</b></dt>
