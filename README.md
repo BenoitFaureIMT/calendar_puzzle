@@ -18,7 +18,7 @@ For each node when it is first created, we first check if the piece fits (check 
 <dd style="text-align:justify">
 Once a node is created and we have checked it is not terminal. We loop over each square that is left and create a node with it (start routine on it). We take the output of this routine, if it is null then proceed to next node, if it isn't it contains the list of traces of the all solutions we happened upon, we add the trace to the list of traces and continue searching. Once we have looped through every shape we return the list of traces.
 
-Question: When do we add ourselves to the trace? Also do we add ourselves only once at the top of the list of traces (in )
+Question: When do we add ourselves to the trace? Also do we add ourselves only once at the top of the list of traces (in an attempt to reduce memory usage -> burden on the stack) or just make the lists of traces directly?
 </dd>
 
 <dt><b>Terminal Nodes</b></dt>
