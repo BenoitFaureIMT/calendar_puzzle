@@ -39,6 +39,7 @@ Probable answer: Why even make a trace... just return positive terminal nodes an
 <dt><b>Terminal Nodes/Grids</b></dt>
 <dd style="text-align:justify">
 <b>(1) Positive Terminal - </b>All the pieces are on the board and we have one month, one number and one day.
+</dd>
 <dd style="text-align:justify">
 <b>(2) Negative Terminal - </b>All the pieces are on the board but we don't have one month, one number and one day.
 </dd>
@@ -47,6 +48,12 @@ Probable answer: Why even make a trace... just return positive terminal nodes an
 </dd>
 <dd style="text-align:justify">
 <b>(0) Not Terminal</b>
+</dd>
+
+<dt><b>Shapes</b></dt>
+<dd style="text-align:justify">
+Shapes can be rotated for 4 dif rotations + mirrored and rotated again.
+Shapes will be stored in lists of shapes of the same rotations, and these lists will be stored in lists of lists.
 </dd>
 
 </dl>
